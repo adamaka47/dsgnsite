@@ -1,0 +1,426 @@
+.project
+	&_title
+		text-transform: uppercase
+		color: #fff
+		font-weight: 400
+		font-size: 36px
+		line-height: 1
+		margin: 13% 0 34% 46%
+		position: relative
+	&_name
+		font-size: 24px
+		text-transform: uppercase
+		line-height: 1
+		color: #333
+		font-weight: 300
+		margin-bottom: 20px
+	&_like
+		max-width: 145px
+		text-align: center
+		margin-top: 22%
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			a
+				font-size: 13px
+				line-height: 1.1
+				color: #fff
+				text-decoration: none
+				font-weight: 400
+				text-transform: uppercase
+				padding-left: 30px
+				transition: all 0.2s
+				&:hover
+					color: #111
+					background: url('../img/arrow.svg') center left 4px no-repeat
+
+	&_link
+		font-size: 18px
+		line-height: 1
+		text-transform: uppercase
+		color: #333
+		text-decoration: none
+		display: inline-block
+		span
+			border-bottom: 1px solid transparent
+			transition: 0.3s
+			vertical-align: middle
+		&:hover span
+			border-color: #333
+		img
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+	&_counter
+		small
+			color: red
+			font-size: 11px
+			line-height: 1.1
+			text-transform: uppercase
+			font-weight: 900
+			display: block
+			margin-top: 5px
+		&_btn
+			background: none
+			border: none
+			cursor: pointer
+			padding: 0
+			outline: none
+			img
+				width: 24px
+				height: 22px
+				&:hover
+					filter: drop-shadow(0px 1px 3px red)
+
+	&_text
+		text-transform: uppercase
+		font-weight: 300
+		font-size: 12px
+		line-height: 1
+		margin: 0
+		&_initial
+			text-transform: initial
+		strong
+			color: #000
+			font-weight: 900
+	&_items
+		display: grid
+		grid-template-columns: repeat(16, 1fr)
+	&_item
+		&_one
+			.project_list
+				margin-top: 36%
+				margin-left: calc(28% - 30px)
+				margin-bottom: 12%
+				position: relative
+				z-index: 1
+			grid-column: span 5
+			grid-row: span 2
+			background-color: $yellows
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				display: block
+				background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="rgb(255,255,255)" stroke-width="1" /></svg>')
+		&_two
+			.project_info
+				margin-left: 18%
+				margin-top: 16%
+			.project_counter
+				margin-left: 19%
+				margin-top: 11%
+				margin-bottom: 12%
+			grid-column: span 6
+			grid-row: span 2
+			background: url('../img/image2.png') right top no-repeat
+			background-size: cover
+		&_three
+			background: #dfe0d9 url('../img/image3.png') left center no-repeat
+			background-size: cover
+			grid-column: span 5
+			grid-row: span 1
+			.project_like
+				margin-top: 6%
+			.project_text
+				max-width: 39%
+			.project_info
+				margin-left: 9%
+				margin-top: 7.5%
+			.project_counter
+				margin-top: 4.7%
+				margin-left: 9%
+				margin-bottom: 4%
+
+		&_four
+			background: #f7f7f3 url('../img/image4.png') top center no-repeat
+			background-size: 100%
+			grid-column: span 5
+			grid-row: span 2
+			padding-top: 72%
+			display: flex
+
+			.project_counter
+				display: flex
+				align-items: flex-start
+				margin-top: 6%
+				margin-right: 3%
+				margin-bottom: 3%
+			.project_like
+				margin-top: 0
+				margin-left: 20px
+			.project_info
+				margin-left: 13%
+				margin-right: 4%
+				margin-bottom: 7.5%
+		&_five
+			background: url('../img/image5.png') left center no-repeat
+			background-size: cover
+			grid-column: span 3
+			grid-row: span 2
+			color: #fff
+			.project_info
+				margin-top: 10%
+				margin-left: 10%
+				margin-bottom: 14%
+			.project_counter
+				margin-bottom: 70%
+				margin-left: 11%
+
+			.project_name
+				color: #fff
+			strong
+				color: #fff
+			.project_link
+				color: #fff
+				&:hover span
+					border-color: #fff
+			.project_counter_btn
+				filter: invert(1)
+			.project_like
+				margin-top: 8%
+
+		&_six
+			background: url('../img/image6.png') top center no-repeat
+			background-size: cover
+			grid-column: span 8
+			grid-row: span 2
+			display: flex
+			.project_info
+				margin-left: 48%
+				margin-top: 12%
+				margin-bottom: 4%
+			.project_counter
+				margin-top: 12%
+				margin-bottom: 4%
+				margin-left: 4%
+			.project_like
+				margin-top: 12%
+				margin-bottom: 4%
+		&_seven
+			background: #fff url('../img/image7.png') top left 20% no-repeat
+			background-size: cover
+			grid-column: span 5
+			grid-row: span 1
+			.project_info
+				margin-left: 56%
+				margin-top: 9%
+			.project_like
+				margin-top: 9%
+			.project_counter
+				margin-left: 57%
+				margin-top: 5%
+				margin-bottom: 5%
+		&_eight
+			background: #fcfcfc url('../img/image8.png') top center no-repeat
+			background-size: cover
+			grid-column: span 8
+			grid-row: span 1
+			display: flex
+			padding-top: 27%
+			.project_info
+				margin-left: 20%
+				margin-bottom: 3%
+			.project_counter
+				display: flex
+				margin-top: 32px
+				margin-left: 6%
+				align-items: flex-start
+				justify-content: space-between
+				flex-basis: 210px
+			.project_like
+				margin-top: 0
+
+		&_nine
+			background: #ccc url('../img/image9.png') top center no-repeat
+			background-size: 100%
+			grid-column: span 3
+			grid-row: span 1
+			.project_info
+				margin-left: 50%
+				margin-top: 25%
+				margin-bottom: 8%
+			.project_counter
+				margin-left: 40%
+				margin-bottom: 10%
+			.project_like
+				margin-top: 14%
+		&_ten
+			background-color: $yellows
+			grid-column: span 5
+			grid-row: span 1
+			position: relative
+			.project_subtitle
+				font-size: 14px
+				text-transform: uppercase
+				line-height: 1
+				position: relative
+				margin-left: 21.5%
+				margin-top: 12%
+			.project_list
+				position: relative
+				margin-left: calc(21.5% - 30px)
+				margin-bottom: 32%
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				display: block
+				background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="60%" y2="0" stroke="rgb(255,255,255)" stroke-width="1" /></svg>')
+
+@media (min-width: 1500px)
+	.project
+		&_title
+			@include texts(300%, 96, 48, 1500px, 3000, 1500)
+		&_list
+			li
+				a
+					@include texts(81%, 26, 13, 1500px, 3000, 1500)
+		&_name
+			@include texts(150%, 48, 24, 1500px, 3000, 1500)
+		&_text
+			@include texts(75%, 24, 12, 1500px, 3000, 1500)
+		&_link
+			@include texts(112%, 36, 18, 1500px, 3000, 1500)
+		&_subtitle
+			@include texts(87%, 28, 14, 1500px, 3000, 1500)
+		&_counter
+			small
+				@include texts(69%, 22, 11, 1500px, 3000, 1500)
+
+
+@media (max-width: 1500px), (min-resolution: 2dppx)
+	.project
+		&_item
+			&_two
+				background-image: urll('../img/image2-2x.png')
+			&_three
+				background-image: urll('../img/image3-3x.png')
+			&_four
+				background-image: urll('../img/image4-4x.png')
+			&_five
+				background-image: urll('../img/image5-5x.png')
+			&_six
+				background-image: urll('../img/image6-6x.png')
+			&_seven
+				background-image: urll('../img/image7-7x.png')
+			&_eight
+				background-image: urll('../img/image8-8x.png')
+			&_nine
+				background-image: urll('../img/image9-9x.png')
+
+@media (max-width: 1023px)
+	.project
+		&_item
+			&_one
+				grid-column: span 7
+				.project_list
+					margin-left: 4%
+			&_two
+				grid-column: span 9
+			&_three
+				grid-column: span 9
+				grid-row: span 2
+				background-size: contain
+			&_four
+				grid-column: span 7
+				.project_counter
+					display: block
+				.project_like
+					margin-top: 15%
+			&_five
+				grid-column: span 6
+			&_six
+				grid-column: span 10
+			&_seven
+				grid-column: span 7
+			&_eight
+				grid-column: span 9
+				background-position: top left
+				background-size: contain
+				.project_like
+					margin-right: 5%
+					margin-left: 2%
+			&_nine
+				grid-column: span 8
+			&_ten
+				grid-column: span 8
+
+
+@media (max-width: 680px)
+	.project
+		&_title
+			font-size: 24px
+		&_item
+			&_two
+				.project_info
+					margin-left: 8%
+					margin-top: 7%
+				.project_counter
+					margin-left: 9%
+					margin-top: 7%
+					margin-bottom: 3%
+			&_three
+				background-position: bottom left
+			&_four
+				display: block
+				.project_info
+					margin-left: 8%
+					margin-right: 2%
+				.project_counter
+					margin-left: 9%
+				.project_like
+					margin-top: 8%
+			&_six
+				display: block
+				background-position: bottom -100px left 80px
+				.project_info
+					margin-left: 8%
+					margin-right: 2%
+					margin-top: 6%
+				.project_counter
+					margin-left: 9%
+			&_eight
+				display: block
+				.project_info
+					margin-left: 6%
+				.project_counter
+					margin-left: 7%
+			&_seven
+				.project_info
+					margin-left: 30%
+				.project_counter
+					margin-left: 31%
+			&_ten
+				.project_list
+					margin-left: 4%
+				.project_subtitle
+					margin-left: 0
+					margin-left: calc(4% + 30px)
+
+
+@media (max-width: 465px)
+	.project
+		&_items
+			grid-template-columns: 1fr
+			grid-template-rows: 1fr
+		&_item
+			grid-column: span 1 !important
+			&_six
+				background-position: right -120px center
+			&_seven
+				background-position: 150px 50px
+				background-size: contain
+			&_three
+				background-position: 0px 0px
+
+

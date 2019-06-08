@@ -1,0 +1,104 @@
+.footer
+	#map
+		height: 100%
+	&_about
+		margin-left: 15%
+		margin-top: 20%
+	&_other
+		margin-top: 20%
+		margin-right: 22%
+	&_items
+		display: grid
+		grid-template-columns: 1fr 1fr
+	&_map
+		grid-columns: span 1
+		background-color: #111
+	&_info
+		grid-columns: span 1
+		.block_socials
+			padding: 0
+	&_title
+		font-weight: 400
+		text-transform: uppercase
+		line-height: 1.1
+		font-size: 18px
+		margin-top: 10px
+		color: #000
+	&_logo
+		max-width: 100%
+		display: block
+	&_address
+		text-transform: uppercase
+		font-size: 13px
+		font-weight: 300
+		line-height: 1.1
+		color: #000
+		margin: 10% 0
+		@media (min-width: 1500px)
+			@include texts(87%, 26, 13, 1500px, 3000, 1500)
+	&_info
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&_contact
+		margin: 10% 0
+
+		a
+			font-size: 13px
+			color: #000
+			text-decoration: none
+			display: inline-block
+			transition: all 0.3s
+			&:hover
+				color: $yellows
+	&_copy
+		text-align: center
+		font-size: 12px
+		line-height: 1.8
+		flex-basis: 100%
+		@media (min-width: 1500px)
+			@include texts(75%, 24, 12, 1500px, 3000, 1500)
+		margin-top: 9%
+		margin-bottom: 7%
+		a
+			color: #333
+			font-weight: 900
+
+@media (max-width: 1500px)
+	.footer_other
+		margin-right: 4%
+
+@media (max-width: 767.98px)
+	.footer
+		&_items
+			grid-template-columns: 1fr
+		&_map
+			padding-bottom: 75%
+		&_about
+			margin-left: 5%
+		&_other
+			margin-right: 5%
+
+@media (max-width: 480px)
+	.footer
+		.block_socials
+			justify-content: center
+		&_about
+			margin: 0
+			padding: 0
+		&_title
+			text-align: left
+			display: inline-block
+		&_address
+			margin-bottom: 5%
+		&_other
+			margin-right: 0
+		&_contact
+			margin: 5% 0
+		&_info
+			display: block
+			text-align: center
+			img
+				margin: auto
+			&_title
+				margin: 0

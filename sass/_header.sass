@@ -1,0 +1,235 @@
+.header
+	&_items
+		display: grid
+		grid-template-columns: repeat(16, 1fr)
+	&_right
+		grid-column: span 5
+		background-color: $blues
+		position: relative
+		padding-top: 11%
+		color: #fff
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			display: block
+			background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><line x1="0" y1="100%" x2="100%" y2="0" stroke="rgb(255,255,255)" stroke-width="1" /></svg>')
+	&_left
+		grid-column: span 11
+		padding-top: 5%
+		padding-bottom: 8%
+		padding-left: 16%
+		background: url('../img/image1.png') 100% center no-repeat
+		background-size: 100%
+		a
+			display: block
+			max-width: 162px
+	&_title
+		font-weight: 300
+		text-transform: uppercase
+		line-height: 1.1
+		font-size: 18px
+		margin-top: 10px
+	&_logo
+		max-width: 100%
+		display: block
+	&_address
+		text-transform: uppercase
+		font-size: 13px
+		font-weight: 300
+		line-height: 1.1
+		position: absolute
+		bottom: 36%
+		left: 13%
+	&_contact
+		position: absolute
+		left: 30%
+		bottom: 18%
+		margin: 0
+		a
+			font-size: 13px
+			color: #fff
+			text-decoration: none
+			display: inline-block
+			transition: all 0.3s
+			&:hover
+				color: $yellows
+	&_nav
+		position: absolute
+		right: 12%
+		top: 50px
+	&_list
+		background-color: $yellows
+		list-style-type: none
+		margin: 0
+		padding: 0
+		display: flex
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		min-width: 720px
+		padding-right: 125px
+		padding-left: 25px
+		align-items: center
+		justify-content: space-around
+		flex-wrap: wrap
+		display: none
+		z-index: -5
+		&_active
+			display: flex
+			z-index: 3
+		li
+			a
+				font-size: 15px
+				text-transform: uppercase
+				color: #fff
+				line-height: 1.8
+				text-decoration: none
+				letter-spacing: 1px
+				transition: 0.2s
+				&:hover
+					color: $bg
+	&_burger
+		z-index: 5
+		&_active
+			position: relative
+			border-color: $yellows
+			z-index: 5
+			span
+				transform: rotate(45deg)
+				&::before, &::after
+				&::after
+					transform: translateY(-2px) rotate(-90deg) !important
+				&::before 
+					opacity: 0
+		background: none
+		border: none
+		display: block
+		cursor: pointer
+		border: 3px solid #f0f0f0
+		width: 125px
+		height: 120px
+		transition: 0.2s
+		position: relative
+		outline: none
+		&:hover
+			border-color: $yellows
+		span
+			width: 40px
+			height: 2px
+			background-color: #f0f0f0
+			display: block
+			transition: 0.4s
+			margin: 0 auto
+			&::after, &::before
+				content: ''
+				display: block
+				background-color: #f0f0f0
+				width: 40px
+				height: 2px
+				margin: auto
+				transition-duration: 0.4s
+			&::after
+				transform: translateY(-8px)
+			&::before
+				transform: translateY(6px)
+
+.block_socials
+	list-style-type: none
+	margin: 0
+	padding: 0
+	display: flex
+	margin-top: 50px
+	padding-left: 15px
+	padding-bottom: 15px
+	li
+		margin-right: 10px
+		transition: all 0.2s
+		&:hover
+			opacity: 0.6
+		&:last-child
+			margin-right: 0
+	&_fb
+		width: 10px
+		height: 22px
+	&_tw
+		width: 26px
+		height: 21px
+	&_gl
+		width: 24px
+		height: 23px
+	&_ld
+		width: 19px
+		height: 19px
+
+@media (min-width: 1500px)
+	.header_title
+		@include texts(112.5%, 36, 18, 1500px, 3000, 1500)
+	.header_address
+		@include texts(81.25%, 26, 13, 1500px, 3000, 1500)
+	.header_contact
+		a
+			@include texts(81.25%, 26, 13, 1500px, 3000, 1500)
+
+
+@media (min-width: 1500px), (min-resolution: 2dppx)
+	.header_left
+		background-image: url('../img/image1-2x.png') 
+
+@media (max-width: 991.98px)
+	.header
+		&_left
+			grid-column: span 9
+		&_right
+			grid-column: span 7
+		&_nav
+			right: 30px
+			height: 100%
+		&_burger
+			width: 70px
+			height: 70px
+		&_list
+			display: block
+			padding-right: 60px
+			padding-top: 15px
+			overflow-y: auto
+			min-width: 100px
+			height: 205px
+			li
+				a
+					display: block
+					margin: 7px 80px 7px 0
+	
+
+@media (max-width: 680px)
+	.header
+		&_items
+			grid-template-columns: 1fr
+			grid-template-rows: 1fr
+		&_left
+			grid-column: span 1
+			background-size: contain
+			background-position: bottom 16% left
+		&_right
+			grid-column: span 1
+		&_address
+			position: static
+			margin-left: 10%
+			margin-top: 10%
+		&_contact
+			position: static
+			margin-left: 40%
+			margin-top: 20%
+			margin-bottom: 20%
+
+@media (min-width: 1500px)
+	.header
+		&_list
+			min-width: 980px
+			li
+				a
+					@include texts(94%, 30, 15, 1500px, 3000, 1500)
